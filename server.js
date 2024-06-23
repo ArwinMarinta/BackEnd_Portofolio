@@ -2,10 +2,12 @@ require("dotenv").config();
 
 const express = require("express");
 const cors = require("cors");
-const { PORT, NODEMAILER_EMAIL } = process.env;
+const { NODEMAILER_EMAIL } = process.env;
 const db = require("./config/database");
 const app = express();
 const { sendEmail } = require("./utils/sendEmail");
+
+const PORT = 3009;
 
 app.use(cors());
 app.use(express.json());
